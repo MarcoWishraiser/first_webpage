@@ -10,42 +10,68 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
+body {
+    background-color: #062229;
+    font-family: Manrope,sans-serif;
+}
+
 .book-button a {
     background: rgb(61,212,128);
-    font-size: 16px;
-    text-decoration: none;
     padding: 12px 40px;
     border-radius: 25px;
+}
+
+div {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
 }
 
 
 /* Header */
 header {
-    background-color: #062229;
-    font-family: monospace;
     font-size: 18px;
-    height: 64px;
+    height: 83px;
+    max-width: 1320px;
     width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
 }
 
 .main-header {
     display: inline-block;
     width: 100%;
-    
-    
 }
 
-.main-.logo, a.logo, .logo img {
+ul {
+    list-style-type: none;
+    margin-left: 64px;
+}
+
+li {
+    display: inline-block;
+    padding: 29px 20px;
+}
+
+.left-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a.logo, .logo img {
     display: block;
-    height: 38px;
     width: 127px;
 }
 
 .phone-side-bar, .phone-side-bar img {
     background: transparent;
     border: 0;
-    display: block;
-    height: 40px;
+    display: none;
     width: 52px;
 }
 
@@ -60,15 +86,16 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 16px;
-    height: 64px;
 }
 
 .right-header {
     display: flex;
     align-items: center;
     justify-content: right;
-    width: 250px;
+}
+
+.right-header .book-button {
+    margin: 0 0 0 32px;
 }
 
 /* Introduction */
