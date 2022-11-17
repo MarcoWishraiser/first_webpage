@@ -5,20 +5,24 @@
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: Arial, Helvetica, sans-serif;
+/*h1, h2, h3, h4, h5, h6 {
+    font-family: Manrope,sans-serif;
     color: white;
-}
+}*/
 
 body {
     background-color: #062229;
     font-family: Manrope,sans-serif;
+    color: white;
 }
 
-.book-button a {
-    background: rgb(61,212,128);
+.book-button a{
+    /*background: rgb(61,212,128);*/
+    background: #abc6d8;
     padding: 12px 40px;
     border-radius: 25px;
+    color: #062229;
+    box-sizing: border-box;
 }
 
 div {
@@ -28,6 +32,8 @@ div {
 a {
     text-decoration: none;
     font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
     color: white;
 }
 
@@ -63,7 +69,7 @@ li {
     justify-content: space-between;
 }
 
-a.logo, .logo img {
+.logo img{
     display: block;
     width: 127px;
 }
@@ -73,13 +79,6 @@ a.logo, .logo img {
     border: 0;
     display: none;
     width: 52px;
-}
-
-.phone-side-bar span {
-    background: black;
-    opacity: 1;
-    width: 32px;
-    display: block;
 }
 
 .flex-container {
@@ -94,31 +93,44 @@ a.logo, .logo img {
     justify-content: right;
 }
 
+.right-header img {
+    width: 20px;
+    height: 20px;
+    margin: 0 8px 0 0;
+}
+
 .right-header .book-button {
     margin: 0 0 0 32px;
 }
 
 /* Introduction */
 
-#introduction {
+#hero-section {
     background-color: #062229;
-    font-family: monospace;
-    padding: 52px 16px 96px;
-    display: block;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding:  93px 24px 128px;
 }
 
-#introduction h1 {
-    font-size: 48px;
+#hero-section h1 {
+    font-size: 112px;
+    letter-spacing: -.025em;
+    font-weight: 600;
+    line-height: 1.0714285714;
+    max-width: 1054px;
 }
 
-#introduction p {
+#hero-section p {
     color: white;
-    font-size: 12px;
-    margin-top: 32px;
+    margin-top: 56px;
     font-size: 20px;
+    max-width: 520px;
+    letter-spacing: normal;
+    line-height: 1.5;
 }
 
-#introduction .book-button {
+#hero-section .book-button {
     font-size: 16px;
-    margin: 32px 0 0;
+    margin: 48px 0 0;
+    display: block;
 }
