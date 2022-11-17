@@ -37,6 +37,9 @@ a {
     color: white;
 }
 
+img {
+    display: block;
+}
 
 /* Header */
 header {
@@ -103,7 +106,7 @@ li {
     margin: 0 0 0 32px;
 }
 
-/* Introduction */
+/* Hero section */
 
 #hero-section {
     background-color: #062229;
@@ -134,3 +137,33 @@ li {
     margin: 48px 0 0;
     display: block;
 }
+
+#hero-images {
+    margin-top: 48px;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.hero-images-left {
+    max-width: 408px;
+    margin-right: 24px;
+}
+
+.top-images {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.top-images img {
+    display: block;
+    height: auto;
+    /*width: calc(50% -12px);*/
+}
+
+.bot-images {
+    margin-top: 24px;
+    width: 100%;
+}
+
