@@ -50,6 +50,7 @@ img {
 
 div {
     display: block;
+    box-sizing: border-box;
 }
 
 /* Header */
@@ -57,11 +58,9 @@ header {
     font-size: 18px;
     height: 83px;
     padding: 0 24px;
-}
-
-.main-header {
-    display: inline-block;
+    max-width: 1320px;
     width: 100%;
+    margin: 0 auto;
 }
 
 ul {
@@ -85,26 +84,30 @@ li {
     width: 127px;
 }
 
-.phone-side-bar, .phone-side-bar img {
+.phone-side-bar {
     background: transparent;
     border: 0;
     display: none;
+    height: 40px;
     width: 52px;
+    margin: -10px 0 0 22px;
+}
+
+.phone-side-bar button {
+    height: auto;
+    width: 100%;
+    background: transparent;
+    border: none;
 }
 
 .flex-container {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.right-header {
-    display: flex;
-    align-items: center;
-    justify-content: right;
-}
-
-.right-header img {
+.right-header .login img{
     width: 20px;
     height: 20px;
     margin: 0 8px 0 0;
@@ -113,6 +116,28 @@ li {
 .right-header .book-button {
     margin: 0 0 0 32px;
 }
+
+@media screen and (max-width: 1200px) {
+    .left-header ul {
+        display: none;
+    }
+
+    .main-header {
+        padding: 16px 0;
+    }
+
+    .phone-side-bar {
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .login ,.book-button {
+        display: none;
+    }
+}
+
 
 /* Hero section */
 
