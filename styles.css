@@ -16,6 +16,12 @@ body {
     color: white;
 }
 
+main {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 .book-button a{
     /*background: rgb(61,212,128);*/
     background: #abc6d8;
@@ -38,6 +44,11 @@ a {
 }
 
 img {
+    height: auto;
+    width: 100%;
+}
+
+div {
     display: block;
 }
 
@@ -45,9 +56,6 @@ img {
 header {
     font-size: 18px;
     height: 83px;
-    max-width: 1320px;
-    width: 100%;
-    margin: 0 auto;
     padding: 0 24px;
 }
 
@@ -139,7 +147,7 @@ li {
 }
 
 #hero-images {
-    margin-top: 48px;
+    margin-top: 24px;
     display: flex;
     align-content: center;
     justify-content: space-between;
@@ -148,6 +156,16 @@ li {
 .hero-images-left {
     max-width: 408px;
     margin-right: 24px;
+    padding-top: 120px;
+}
+
+.hero-images-center {
+    padding-top: 144px;
+}
+
+.hero-images-right {
+    margin-left: 24px;
+    padding-top: 24px;
 }
 
 .top-images {
@@ -156,14 +174,38 @@ li {
     justify-content: space-between;
 }
 
-.top-images img {
-    display: block;
-    height: auto;
-    /*width: calc(50% -12px);*/
-}
-
 .bot-images {
     margin-top: 24px;
     width: 100%;
+}
+
+.image-container {
+    width: calc(50% - 12px);
+}
+
+
+/* PARTNER SECTION */
+
+#partner-section {
+    padding: 128px 0;
+}
+
+#partner-section h2 {
+    font-size: 12px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: hsla(0,0%,100%,.7);
+}
+
+#partner-section .flex-container {
+    margin: 64px auto 0;
+    max-width: 936px;
+    height: 59px;
+}
+
+#partner-section .flex-container div {
+    width: 136px;
+    margin-right: 64px;
 }
 
