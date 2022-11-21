@@ -110,11 +110,11 @@ li {
 .right-header .login img{
     width: 20px;
     height: 20px;
-    margin: 0 8px 0 0;
+    margin: 0 8px 0 0; /* Modify */
 }
 
 .right-header .book-button {
-    margin: 0 0 0 32px;
+    margin: 0 0 0 32px; /* Modify */
 }
 
 @media screen and (max-width: 1200px) {
