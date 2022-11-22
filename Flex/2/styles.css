@@ -18,9 +18,7 @@
 }
 
 .header {
-    max-width: 1320px;
     height: 80%;
-    margin: 0 auto;
     padding: 40px 5%;
     align-items: stretch;
     gap: 2%;
@@ -64,4 +62,28 @@
 .footer div {
     background-color: black;
     flex-grow: 1;
+}
+
+@media only screen and (min-width: 600px) {
+    .header {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .footer {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .header {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+
+    .footer {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
 }

@@ -35,8 +35,6 @@ div {
 }
 
 .header {
-    margin: 0 auto;
-    max-width: 1320px;
     align-items: stretch;
 }
 
@@ -77,4 +75,18 @@ div {
 .small-box {
     background: blue;
     flex-grow: 1;
+}
+
+@media only screen and (min-width: 600px) {
+    .header {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .header {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
 }
