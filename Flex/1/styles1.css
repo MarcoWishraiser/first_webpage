@@ -9,36 +9,35 @@ div {
 
 .top {
     background: white;
-    width: 100%;
     margin: 40px 0;
+    padding: 0 2%;
+}
+
+.top .header {
+    gap: 5%;
+    height: 200px;
 }
 
 .bot {
     background: lightgreen;
-    width: 100%;
-    height: 600px;
-    padding-top: 20px;
+    padding: 20px 2%;
 }
 
 .box {
     background: blue;
-    height: 200px;
-    width: 30%;
+    flex-grow: 1;
 }
 
 .flex-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    align-content: space-between;
-    width: 100%;
-    height: 100%;
 }
 
 .header {
     margin: 0 auto;
-    width: 50%;
-    height: 100%;
+    max-width: 1320px;
+    align-items: stretch;
 }
 
 .hero {
@@ -47,27 +46,35 @@ div {
 
 .column {
     background: blue;
-    width: 30%;
-    height: 100%;
+    flex-grow: 1;
 }
 
 .right {
-    flex-wrap: wrap;
-    width: 75%;
+    flex-flow: column wrap;
+    align-items: stretch;
+    flex-grow: 3;
+    gap: 10%;
 }
 
 .left {
-    width: 25%;
+    flex-grow: 1;
+    flex-shrink: 3;
+    gap: 20%;
+    align-items: stretch;
 }
 
-.bot-right {
+.box-right {
     background: blue;
-    width: 100%;
-    height: 55%;
+    flex-grow: 1;
+}
+
+.right-bot {
+    gap: 5%;
+    align-items: stretch;
+    flex-grow: 1;
 }
 
 .small-box {
     background: blue;
-    width: 30%;
-    height: 40%;
+    flex-grow: 1;
 }
