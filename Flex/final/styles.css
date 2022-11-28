@@ -31,7 +31,7 @@ img {
 .header {
     flex-flow: column wrap;
     align-items: stretch;
-    margin: 2% 4% 0;
+    margin: 2% 4% 30%;
 }
 
 .images {
@@ -50,5 +50,69 @@ img {
 .black-box {
     background: black;
     height: 200px;
-    margin: 0 2%;
+}
+
+/* Second header */
+
+.second .text {
+    order: 3;
+}
+
+.second .black-box {
+    margin-top: 5%;
+}
+
+/* Main content */
+.main-content {
+    flex-flow: column wrap;
+    margin: 2% 4% 0;
+}
+
+.main-content .image-eifell {
+    height: 250px;
+    width: 100%;
+}
+
+
+.one .text {
+    margin: 0 0 2%;
+}
+
+.two {
+    margin: 0 2% 5%;
+}
+
+.two .image-eifell {
+    order: 2;
+}
+
+.two .text {
+    margin-bottom: 5%;
+}
+
+@media only screen and (min-width: 500px) {
+    .images {
+        flex-flow: row nowrap;
+        height: 100%;
+        gap: 10%;
+    }
+
+    .image-eifell {
+        max-width: 45%;
+    }
+
+    .main-content {
+        flex-flow: row nowrap;
+        margin: 2% 4% 0;
+        gap: 10%;
+    }
+
+    .main-content .text {
+        max-width: 45%;
+    }
+
+    hr {
+        display: none;
+    }
+
 }
