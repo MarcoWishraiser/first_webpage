@@ -4,7 +4,7 @@
 }
 
 main {
-    max-width: 1320px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -33,6 +33,7 @@ img {
 
 .text {
     flex-grow: 1;
+    font-size: 20px;
 }
 
 
@@ -175,6 +176,10 @@ img {
         margin-bottom: 20px;
     }
 
+    .first {
+        padding-right: 5%;
+    }
+
     .second {
         padding: 0;
     }
@@ -189,7 +194,7 @@ img {
         justify-content: space-between;
         gap: 5%;
         margin-left: 3%;
-        margin-right: 3%;
+        margin-right: 8%;
     }
 
     .side-bar {
