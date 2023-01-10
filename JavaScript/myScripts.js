@@ -1,3 +1,10 @@
+let league_teams = [];
+
+function Team(name, points) {
+    this.name = name;
+    this.points = points;
+}
+
 let url_teams = "https://www.thesportsdb.com/api/v1/json/2/search_all_teams.php?l=Italian%20Lega%20Basket";
 
 fetch(url_teams)
@@ -11,6 +18,8 @@ function teamsNames(teams) {
     let list = document.getElementById("teams")
 
     teams.map(function(team) {
+        league_teams.push(new Team(team.strTeam, 0));
+
         let li = document.createElement("li");
         
         let p = document.createElement("p");
@@ -26,14 +35,14 @@ function teamsNames(teams) {
 
 }
 
-let url = "https://www.thesportsdb.com/api/v1/json/2/eventsround.php?id=4433&r=1&s=2022-2023";
+let url_round = "https://www.thesportsdb.com/api/v1/json/2/eventsround.php?id=4433&r=1&s=2022-2023";
 
-fetch(url)
+fetch(url_round)
     .then(response => response.json())
-    .then(data => ranks(data["events"]));
+    .then(data => round(data["events"]));
 
 
-function ranks(events) {
+function round(events) {
     console.log(events);
 
     let giornata = document.getElementById("giornata");
@@ -56,3 +65,51 @@ function ranks(events) {
         giornata.appendChild(tr);
     })
 }
+
+
+let url = "https://www.thesportsdb.com/api/v1/json/2/eventsseason.php?id=4433&s=2022-2023";
+
+fetch(url)
+    .then(response => response.json())
+    .then(data => ranks(data["events"]));
+
+
+function ranks(events) {
+    console.log(events.filter(x => x.strAwayTeam === "Victoria Libertas" || x.strHomeTeam === "Victoria Libertas"));
+    
+
+    events.map(function(event) {
+        if (event.intHomeScore > event.intAwayScore) {
+            league_teams.find(function(team) {
+                if (team.name === event.strHomeTeam) {
+                    team.points += 2;
+                }
+            });
+        } else if (event.intAwayScore > event.intHomeScore) {
+            league_teams.find(function(team) {
+                if (team.name === event.strAwayTeam) {
+                    team.points += 2;
+                }
+            });
+        }
+    });
+
+    league_teams.sort((x, y) => (x.points > y.points ? -1 : x.points < y.points ? 1 : 0));
+
+    let classifica = document.getElementById("classifica");
+    
+    league_teams.map(function(team) {
+        let tr = document.createElement("tr");
+
+        let name = document.createElement("td");
+        name.innerText = team.name;
+        tr.appendChild(name);
+
+        let points = document.createElement("td");
+        points.innerText = team.points;
+        tr.appendChild(points);
+
+        classifica.appendChild(tr);
+    });
+}
+

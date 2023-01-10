@@ -3,6 +3,13 @@
     margin: 0;
 }
 
+#classifica {
+    width: 100%;
+    max-width: 600px;
+    padding: 5%;
+    margin: 2% auto;
+}
+
 #giornata {
     width: 100%;
     max-width: 1320px;
@@ -12,6 +19,7 @@
 th, td {
     border:1px solid black;
     text-align: center;
+    padding: 5px 0;
 }
 
 li > img {
@@ -42,6 +50,11 @@ li > p {
 }
 
 @media screen and (min-width: 1320px) {
+
+    #classifica {
+        padding: 0;
+    }
+
     #giornata {
         margin: 2% auto;
         padding: 0;
