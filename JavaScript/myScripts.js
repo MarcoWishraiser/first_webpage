@@ -1,3 +1,9 @@
+const queryString = window.location.search;
+
+const urlParams = new URLSearchParams(queryString);
+const intRound = urlParams.get('round');
+console.log(intRound);
+
 let league_teams = [];
 
 function Team(name, points) {
@@ -35,7 +41,7 @@ function teamsNames(teams) {
 
 }
 
-let url_round = "https://www.thesportsdb.com/api/v1/json/2/eventsround.php?id=4433&r=1&s=2022-2023";
+let url_round = `https://www.thesportsdb.com/api/v1/json/2/eventsround.php?id=4433&r=${intRound === null ? 1 : intRound}&s=2022-2023`;
 
 fetch(url_round)
     .then(response => response.json())
@@ -55,7 +61,11 @@ function round(events) {
         tr.appendChild(home);
 
         let result = document.createElement("td");
-        result.innerText = event.intHomeScore + " - " + event.intAwayScore;
+        if (event.intHomeScore === null) {
+            result.innerText = `0 - 0`
+        } else {
+            result.innerText = event.intHomeScore + " - " + event.intAwayScore;
+        }
         tr.appendChild(result);
 
         let guest = document.createElement("td");
@@ -75,20 +85,22 @@ fetch(url)
 
 
 function ranks(events) {
-    console.log(events.filter(x => x.strAwayTeam === "Victoria Libertas" || x.strHomeTeam === "Victoria Libertas"));
+    //console.log(events.filter(x => x.strAwayTeam === "Victoria Libertas" || x.strHomeTeam === "Victoria Libertas"));
     
 
     events.map(function(event) {
-        if (event.intHomeScore > event.intAwayScore) {
+        if (parseInt(event.intHomeScore) > parseInt(event.intAwayScore)) {
             league_teams.find(function(team) {
                 if (team.name === event.strHomeTeam) {
                     team.points += 2;
+                    //console.log(team.name + team.points);
                 }
             });
-        } else if (event.intAwayScore > event.intHomeScore) {
+        } else if (parseInt(event.intAwayScore) > parseInt(event.intHomeScore)) {
             league_teams.find(function(team) {
                 if (team.name === event.strAwayTeam) {
                     team.points += 2;
+                    //console.log(team.name + team.points);
                 }
             });
         }
@@ -113,3 +125,9 @@ function ranks(events) {
     });
 }
 
+
+function updatePage() {
+    let readRound = document.getElementById("round").value;
+
+    window.location.href = `file:///D:/Marco/Desktop/Lavoro/Lessons/first_webpage/JavaScript/index.html?round=${readRound < 1 ? 1 : readRound > 30 ? 1 : readRound}`;
+}
