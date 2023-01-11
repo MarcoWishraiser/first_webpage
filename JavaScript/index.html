@@ -12,10 +12,8 @@
 </head>
 <body>
     <header>
-        <div>
-            <img id="logo" src="" alt="Logo Lega Basket Sere A">
-        </div>
-        <div>
+        <div class="flex">
+            <img id="logo" src="https:\/\/www.thesportsdb.com\/images\/media\/league\/badge\/zenfi61667129026.png" alt="Logo Lega Basket Sere A">
             <h1>Lega Basket serie A</h1>
         </div>
     </header>
@@ -23,27 +21,30 @@
         <div>
             <ul id="teams"></ul>
         </div>
-        <div>
-            <table id="classifica">
-                <tr>
-                    <th>Squadra</th>
-                    <th>Punti</th>
-                </tr>
-            </table>
-        </div>
-        <div id="chose-round">
-            <!--<button onclick="updatePage()">click me</button>-->
-            <input type="number" id="round" name="round" placeholder="1" min="1" max="30">
-            <input type="submit" onclick="updatePage()">
-        </div>
-        <div>
-            <table id="giornata">
-                <tr>
-                    <th>Casa</th>
-                    <th>Risultato</th>
-                    <th>Ospiti</th>
-                </tr>
-            </table>
+        <div id="tables">
+            <div>
+                <table id="classifica">
+                    <tr>
+                        <th>Squadra</th>
+                        <th>Punti</th>
+                    </tr>
+                </table>
+            </div>
+            <div id="choose-round">
+                <!--<button onclick="updatePage()">click me</button>-->
+                <label for="round">Seleziona la giornata:</label>
+                <input type="number" id="round" name="round" placeholder="1" min="1" max="30">
+                <input type="submit" id="round-button" onclick="updatePage()">
+            </div>
+            <div>
+                <table id="giornata">
+                    <tr>
+                        <th>Casa</th>
+                        <th>Risultato</th>
+                        <th>Ospiti</th>
+                    </tr>
+                </table>
+            </div>
         </div>
     </main>
 </body>

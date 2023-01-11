@@ -3,26 +3,93 @@
     margin: 0;
 }
 
+header {
+    background-color: #1F1E3D;
+    padding: 15px 0;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 48px;
+}
+
+#logo {
+    height: 150px;
+    width: 150px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+}
+
 #classifica {
+    border-collapse: collapse;
+    background-color: white;
     width: 100%;
     max-width: 600px;
     padding: 5%;
     margin: 2% auto;
 }
 
+#choose-round {
+    text-align: center;
+    margin: 40px 0;
+}
+
+#choose-round > label {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+#round-button {
+    height: 20px;
+    width: 50px;
+    margin: 0 auto;
+}
+
+#round {
+    text-align: center;
+    height: 20px;
+}
+
 #giornata {
+    border-collapse: collapse;
+    background-color: white;
     width: 100%;
     max-width: 1320px;
     padding: 5%;
 }
 
-th, td {
-    border:1px solid black;
-    text-align: center;
-    padding: 5px 0;
+#tables {
+    background-image: url(img/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0;
+    margin-top: 40px;
 }
 
-li > img {
+th {
+    color: #73749C;
+    font-style: bold !important;
+    font-weight: 800 !important;
+    font-size: 28px !important;
+}
+
+th, td {
+    border:1px solid gray;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a > img {
     max-width: 100%;
     max-height: 100%;
     /* margin: 0 auto; */
@@ -30,9 +97,20 @@ li > img {
     margin-top: 10px;
 }
 
-li > p {
+a {
+    text-decoration: none;
     text-align: center;
+    color: #1f1f3c;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
 }
+
+a > p {
+    display: none;
+}
+
+
 
 #teams {
     display: flex;
@@ -52,11 +130,13 @@ li > p {
 @media screen and (min-width: 1320px) {
 
     #classifica {
-        padding: 0;
+        padding: 20px 0;
+        margin: 2% auto;
     }
 
     #giornata {
         margin: 2% auto;
         padding: 0;
     }
+
   }

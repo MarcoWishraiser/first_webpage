@@ -27,15 +27,18 @@ function teamsNames(teams) {
         league_teams.push(new Team(team.strTeam, 0));
 
         let li = document.createElement("li");
+        let a = document.createElement("a");
+        a.setAttribute("href", `file:///D:/Marco/Desktop/Lavoro/Lessons/first_webpage/JavaScript/team.html?id=${team.idTeam}`);
         
         let p = document.createElement("p");
         p.innerText = team.strTeam;
-        li.appendChild(p);
+        a.appendChild(p);
 
         let img = document.createElement("img");
         img.setAttribute("src", team.strTeamBadge);
-        li.appendChild(img);
+        a.appendChild(img);
 
+        li.appendChild(a);
         list.appendChild(li);
     })
 
