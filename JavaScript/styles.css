@@ -110,8 +110,6 @@ a > p {
     display: none;
 }
 
-
-
 #teams {
     display: flex;
     justify-content: center;
@@ -126,6 +124,42 @@ a > p {
     /*flex-grow: 1;*/
     width: 150px;
 }
+
+/* Team section */ 
+#team-logo {
+    width: 300px;
+    height: 300px;
+    padding-top: 40px;
+}
+
+#team-name {
+    text-align: center;
+    font-size: 48px;
+}
+
+h3 {
+    width: 100%;
+    max-width: 1320px;
+}
+
+#last-games {
+    width: 100%;
+    max-width: 1320px;
+    text-align: center;
+    margin: 40px auto;
+}
+
+#latest-results {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.background {
+    background-image: url(img/background-team.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 @media screen and (min-width: 1320px) {
 
