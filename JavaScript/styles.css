@@ -151,13 +151,6 @@ h3 {
     margin: 80px 0 20px;
 }
 
-#last-games {
-    width: 100%;
-    max-width: 1320px;
-    text-align: center;
-    margin: 40px auto;
-}
-
 #latest-results {
     width: 100%;
     border-collapse: collapse;
@@ -169,6 +162,29 @@ h3 {
     background-size: cover;*/
     background: rgb(2,0,36);
     background: linear-gradient(0deg, rgba(2,0,36,0.5816701680672269) 0%, rgba(9,9,121,0.18391106442577032) 35%, rgba(62,222,255,0.17270658263305327) 100%);
+}
+
+#stadium {
+    padding-bottom: 50px;
+}
+
+#description, #stadium-description {
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 40px;
+}
+
+#stadium-image{
+    width: 100%;
+    margin-top: 40px;
+    padding: 0;
+}
+
+.mobile {
+    padding: 0 2%;
+    max-width: 1320px;
+    margin: 0 auto;
 }
 
 

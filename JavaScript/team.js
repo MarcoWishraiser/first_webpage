@@ -25,11 +25,11 @@ function printTeamData(teams) {
     let description = document.getElementById("description");
     description.innerText = team.strDescriptionIT;
 
-    /*let imgStadium = document.getElementById("stadium-image");
+    let imgStadium = document.getElementById("stadium-image");
     imgStadium.setAttribute("src", team.strStadiumThumb);
 
     let stadiumDescription = document.getElementById("stadium-description");
-    stadiumDescription.innerText = team.strStadiumDescription;*/
+    stadiumDescription.innerText = team.strStadiumDescription;
 
 }
 
